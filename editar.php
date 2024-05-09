@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <h1>Cadastro de novo item</h1>
+    <h1>Editar item</h1>
     <div class="container">
 <?php
+
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 require_once ("./editar-view.php");
 ?>
@@ -24,12 +25,6 @@ require_once ("./editar-view.php");
         id="id"
         value="<?=$resultado['IDEstoque']?>">
         <!--pega o id-->
-            <div class="row">
-                <div class="col">
-                    <label for="nome">Nome do produto</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome do novo produto">
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col">

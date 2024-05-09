@@ -37,5 +37,5 @@ try {
         echo "falha ao inserir (la ele)";
     }
 } catch (PDOException $erro) {
-    echo ("Entre em contato com o suporte.");
+    echo ("Erro Cadastrobd.");
 }

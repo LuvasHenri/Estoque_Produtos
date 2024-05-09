@@ -3,10 +3,12 @@
 require_once ("./conexao/conexao.php");
 
 try {
-    $sql = "SELECT * FROM estoque WHERE IDESTOQUE=:id";
+    $sql = "SELECT * FROM estoque WHERE IDEstoque=:id";
     $comandoSQL = $conexao->prepare($sql);
     $comandoSQL->execute(array(":id" => $id));
     $resultados = $comandoSQL->fetch();
+    
+
 } catch (\Throwable $th) {
     echo ("Erro no id");
 }

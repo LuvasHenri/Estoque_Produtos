@@ -6,9 +6,9 @@ $minimo = filter_input(INPUT_POST, "minimo", FILTER_SANITIZE_NUMBER_INT);
 
 
 try {
+    require_once("./conexao/conexao.php");
     $comandoSQL = $conexao->prepare("
     UPDATE estoque SET
-        nomeEstoque = :nome,
         quantidadeEstoque = :quantidade,
         quantidademinimaEstoque = :minimo
         WHERE IDEstoque = :id
@@ -32,5 +32,5 @@ try {
         echo ("Erro na atualização");
     }
 } catch (PDOException $erro) {
-    //throw $th;
+    echo (" Erro editar bd ");
 }
