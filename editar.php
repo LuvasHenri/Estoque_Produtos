@@ -17,7 +17,7 @@
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 require_once ("./editar-view.php");
 ?>
-        <form action="./cadastrobd.php" method="post">
+        <form action="./editar.php" method="post">
 
         <input
         type="hidden"
